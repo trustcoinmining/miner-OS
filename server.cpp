@@ -1,5 +1,5 @@
 #include <iostream>
-#include "TCPServer.h"
+#include "src/TCPServer.h"
 
 TCPServer tcp;
 
@@ -26,7 +26,7 @@ void * loop(void * m)
 int main()
 {
 	pthread_t msg;
-	tcp.setup(11999);
+	tcp.setup(8888);
 	if( pthread_create(&msg, NULL, loop, (void *)0) == 0)
 	{
 		tcp.receive();
