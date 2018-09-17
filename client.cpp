@@ -109,20 +109,19 @@ int main(int argc, char *argv[])
 						cout << "dev pci : " << devpci << endl;
 						string devs = "/sys/bus/pci/devices/0000:" + string(devpci) + "/resource0";
 						f_device << devs << "\n";
-						// system("cp devices.txt /root/Downloads/ccminer.linux && rm devices.txt"); //for each folder
+						// system("cp devices.txt /root/Miner/ccminer.linux && rm devices.txt"); //for each folder
 						
 					}
 					
 					f_device.close();
 				}
-				json_decref(root);
-
-				//miner cores & devices
-
 
 				//turn on/off miner
-
-
+				if(strcmp(value,"onoff") == 0){}
+				//upload bitstream
+				if(strcmp(value,"bit") == 0){
+					
+				}
 
 				//configuration
 				// pseudo code
@@ -133,7 +132,7 @@ int main(int argc, char *argv[])
 
 				//monitoring
 				//pseudo code
-				
+				json_decref(root);
 
 			}
 
